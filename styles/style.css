@@ -121,12 +121,25 @@
   font-weight: 600;
 }
 
-/* DIGITS */
-.digits {
+/* DIGITS, KAUFMAN */
+.digits, .kaufman {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
+  position: relative;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  right: -210px;
+  top: 0;
 }
 
 /* SECTION */
@@ -139,12 +152,21 @@
   font-weight: 600;
 }
 
+.section-title_theme_dark {
+  padding-top: 90px;
+  color: #fff;
+}
+
 .section-subtitle {
   width: 60%;
   text-align: center;
   margin-bottom: 0;
   line-height: 34px;
   font-size: 24px;
+}
+
+.section-subtitle_theme_dark {
+  color: #fff;
 }
 
 .section-subtitle_margin-top_xs {
@@ -156,29 +178,46 @@
   flex-wrap: wrap;
   margin: auto;
   justify-content: space-between;
+  z-index: 1;
 }
 
-.table__cell {
+.table_theme_dark {
+  color: #fff;
+  margin-bottom: 90px;
+}
+
+.table__cell_width_l {
   width: 250px;
+}
+
+.table__cell_width_m {
+  width: 200px;
 }
 
 .table__cell_margin-top_m {
   margin-top: 60px;
 }
 
+.table__cell_margin-top_l {
+  margin-top: 80px;
+}
+
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
+  margin: 0;
 }
 
 .table__text{
   line-height: 1.2;
   font-size: 18px;
+  padding-top: 20px;
+  margin: 0;
 }
 
 .table__text_after_bank::after {
-  content: "Всемирный Банк, 2017";
+  content: 'Всемирный Банк, 2017';
   display: block;
   margin-top: 20px;
 }
@@ -193,6 +232,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
@@ -202,6 +242,7 @@
   font-size: 120px;
   font-weight: 600;
   margin: 0;
+  padding-top: 100px;
 }
 
 .feynman__subtitle {
