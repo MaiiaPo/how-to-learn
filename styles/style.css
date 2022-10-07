@@ -15,11 +15,14 @@
 
 /* HEADER */
 .header {
+  display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
   align-items: center;
+  background-color: #f2f2f2;
+  margin-bottom: 100px;
 }
 
 .logo_place_header {
@@ -27,7 +30,7 @@
   top: 30px;
   left: 64px;
   background-image: url(../images/logo_place_header.svg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__title {
@@ -37,22 +40,23 @@
   padding-left: 64px;
   width: 730px;
   margin: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__subtitle{
   position: absolute;
   bottom: 30px;
   left: 64px;
-  display: inline-block;
   width: 388px;
   line-height: 25px;
   font-size: 18px;
   margin: 0;
+  z-index: 2;
 }
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__link:hover {
@@ -78,21 +82,17 @@
   height: 568px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
 /* DESCRIPTION */
 .description {
-  width: 80%;
-  margin: 100px auto;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 100px;
+  display: flex;
 }
 
 .two-columns {
+  width: 80%;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -116,7 +116,8 @@
   font-size: 24px;
 }
 
-.two-columns__paragraph_margin_bottom {
+.two-columns__paragraph:nth-child(1),
+.two-columns__paragraph:nth-child(2){
   margin-bottom: 30px;
 }
 
@@ -126,10 +127,12 @@
 
 /* DIGITS, KAUFMAN */
 .digits, .kaufman {
+  display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
+
 .digits {
   margin-bottom: 100px;
 }
@@ -137,11 +140,16 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
+  padding-bottom: 90px;
 }
 
 .kaufman__triangle {
   width: 877px;
   height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   right: -210px;
   top: 0;
@@ -155,6 +163,7 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
+  z-index: 1;
 }
 
 .section-title_theme_dark {
@@ -167,43 +176,35 @@
   text-align: center;
   margin-bottom: 0;
   line-height: 34px;
+  font-weight: normal;
   font-size: 24px;
+  margin-top: 20px;
 }
 
 .section-subtitle_theme_dark {
   color: #fff;
 }
 
-.section-subtitle_margin-top_xs {
-  margin-top: 20px;
-}
-
 .table {
+  display: flex;
   width: 1100px;
   flex-wrap: wrap;
   margin: auto;
   justify-content: space-between;
   z-index: 1;
+  list-style-type: none;
+  padding: 0;
 }
 
-.table_theme_dark {
-  color: #fff;
-  margin-bottom: 90px;
-}
-
-.table__cell_width_l {
+.table__cell{
   width: 250px;
-}
-
-.table__cell_width_m {
-  width: 200px;
-}
-
-.table__cell_margin-top_m {
   margin-top: 60px;
 }
 
-.table__cell_margin-top_l {
+.table__cell_theme_dark {
+  width: 200px;
+  color: #fff;
+  margin-right: 0;
   margin-top: 80px;
 }
 
@@ -221,16 +222,11 @@
   margin: 0;
 }
 
-.table__text_after_bank::after {
-  content: 'Всемирный Банк, 2017';
-  display: block;
-  margin-top: 20px;
-}
-
 /* FEYNMAN */
 .feynman {
+  display: flex;
   width: 100%;
-  height: 890px;
+  min-height: 890px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -253,6 +249,7 @@
 .feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
+  font-weight: normal;
   margin: 70px 0 0;
 }
 
@@ -273,6 +270,7 @@
 /* FOOTER */
 
 .footer {
+  display: flex;
   min-height: 350px;
   background-color: #1f1f1f;
   justify-content: center;
@@ -280,7 +278,8 @@
 }
 
 .footer__columns {
-  width: 80%;
+  display: flex;
+  width: 90%;
   justify-content: space-between;
   margin: 60px 0 40px;
 }
@@ -290,38 +289,47 @@
   height: 32px;
 }
 
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
+  display: flex;
   flex-basis: 711px;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.footer__copyright {
+.footer__author {
   padding: 18px 0;
   line-height: 25px;
+  margin: 0;
+}
+
+.footer__column {
+  line-height: 30px;
   font-size: 18px;
 }
 
-.footer__title {
-  line-height: 30px;
-  font-size: 18px;
+.footer__column-heading {
   font-weight: 600;
   margin: 0;
 }
 
-.footer__list {
+.footer__column-links {
   list-style: none;
-  line-height: 30px;
-  font-size: 18px;
   padding: 20px 0 16px;
   margin: 0;
 }
 
-.footer__icon {
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
 }
 
-.footer__link:hover {
+.footer__column-link {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.footer__column-link:hover {
   cursor: pointer;
   color:#2f80ed;
 }
