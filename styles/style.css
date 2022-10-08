@@ -18,7 +18,7 @@
   /* выше установили ограничения для секции */
   align-items: center;
   background-color: #f2f2f2;
-  margin-bottom: 100px;
+  position: relative;
 }
 
 .logo_place_header {
@@ -82,8 +82,8 @@
 .description {
   width: 100%;
   justify-content: center;
-  margin-bottom: 100px;
   display: flex;
+  padding: 100px 0 0;
 }
 
 .two-columns {
@@ -128,8 +128,8 @@
   align-items: center;
 }
 
-.digits {
-  margin-bottom: 100px;
+.digits{
+  padding: 100px 0;
 }
 
 .kaufman {
