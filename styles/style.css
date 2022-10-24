@@ -136,6 +136,56 @@ to {
   font-weight: 600;
 }
 
+/* TECHNIQUES */
+.techniques {
+  display: flex;
+  padding: 100px 0 0;
+  width: 80%;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  list-style-type: none;
+  width: 920px;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  width: 240px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.cards__title {
+  padding-top: 43px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards__desctiption {
+  padding-top: 16px;
+  margin: 0;
+  text-align: center;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 /* DIGITS, KAUFMAN */
 .digits, .kaufman {
   display: flex;
@@ -144,7 +194,7 @@ to {
   align-items: center;
 }
 
-.digits{
+.digits {
   padding: 100px 0;
 }
 
