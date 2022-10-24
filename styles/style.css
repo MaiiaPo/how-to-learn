@@ -186,6 +186,35 @@ to {
   font-weight: 500;
 }
 
+/* VIDEO */
+.video {
+  display: flex;
+  padding: 100px 0 0;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.video__iframes {
+  padding-top: 50px;
+  display: flex;
+  margin: auto;
+}
+
+.video__iframe:first-child {
+  padding-right: 20px;
+}
+
+/* OAKLEY */
+.oakley {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  padding: 160px 0 0;
+  background-color: #f2f2f2;
+  margin-top: -50px;
+}
+
 /* DIGITS, KAUFMAN */
 .digits, .kaufman {
   display: flex;
