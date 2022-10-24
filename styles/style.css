@@ -441,6 +441,37 @@ to {
   cursor: pointer;
 }
 
+/* RESOURSES */
+.resources {
+  display: flex;
+  padding: 100px 0 0;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.resources__logo-zone {
+  list-style-type: none;
+  display: flex;
+  padding: 80px 0 217px 0;
+  width: 1100px;
+  margin: 0;
+  align-items: center;
+}
+
+.resources__logo {
+  box-sizing: border-box;
+  width: 270px;
+  height: 38px;
+  opacity: 1;
+  transition: opacity .3s linear .2s;
+}
+
+.resources__logo:hover {
+  opacity: .3;
+}
+
 /* FOOTER */
 
 .footer {
