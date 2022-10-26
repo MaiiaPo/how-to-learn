@@ -2,10 +2,4 @@
   box-sizing: border-box;
   width: 270px;
   height: 38px;
-  opacity: 1;
-  transition: opacity .3s linear .2s;
-}
-
-.resources__logo:hover {
-  opacity: .3;
 }

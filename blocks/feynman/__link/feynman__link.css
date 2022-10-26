@@ -6,11 +6,4 @@
   position: absolute;
   top: 50%;
   right: 0;
-  opacity: 1;
-  transition: opacity .3s linear .2s;
-}
-
-.feynman__link:hover {
-  opacity: .3;
-  cursor: pointer;
 }
